@@ -1,0 +1,19 @@
+#!/bin/bash
+$(sleep 30) &
+sleepid1=$!
+
+$(sleep 60) &
+sleepid2=$!
+
+echo "Sleeping pid is $sleepid1"
+echo "Second Sleeping pid is $sleepid2"
+
+sleep 5
+
+$(kill -0 $sleeppid1)
+result1=$?
+$(kill -0 $sleeppid2)
+result2=$?
+
+echo $result1
+echo $result2
