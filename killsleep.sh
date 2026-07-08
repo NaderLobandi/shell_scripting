@@ -12,9 +12,9 @@ sleep 5
 
 $(kill $sleepid1)
 
-$(kill -0 $sleepid1)
+kill -0 $sleepid1
 result1=$?
-$(kill -0 $sleepid2)
+kill -0 $sleepid2
 result2=$?
 
 echo $result1
