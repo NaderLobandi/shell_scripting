@@ -1,4 +1,5 @@
 #! /bin/bash
+
 str1="$1"
 str2="$2"
 
@@ -12,4 +13,18 @@ elif [[ $str1 < $str2 ]]; then
 elif [[ $str1 > $str2 ]]; then 
 	echo "$str2" 
 	exit "${#str2}"
+fi
+
+if [[ $# -ge 2 ]]; then
+	echo "Enough arguments"	
+else
+	exit 1
+fi
+
+if [[ ! -n $str1 ]]; then
+	exit 2
+fi
+
+if [[ ! -n $str2 ]]; then
+	exit 2
 fi
