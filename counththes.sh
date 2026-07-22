@@ -6,7 +6,7 @@ while read line ;do
 	if [[ "$count" -ge 1 ]]; then
 		echo "$line"
 		echo "number of the's found: $count"
-		total=$((total+1))
 	fi
+	total=$((total+$count))
 done < $infile
 echo "Total numbe of the's found: $total"
